@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+    <h1 class="text-center">Inserir Cliente</h1>
+
+    <%= form_for(@clientes, url:new_cliente_path) do |f| %>
+
+
+      <div class="form-group">
+        <%= f.text_field :nome, autofocus: true, class: 'form-control', placeholder: "Nome" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.text_field :morada, autofocus: false, class: 'form-control', placeholder: "Morada do Cliente"%>
+      </div>
+
+      <div class="form-group">
+        <%= f.text_field :concelho, autofocus: false, class: 'form-control', placeholder: "Concelho"%>
+      </div>
+
+      <div class="form-group">
+        <%= f.phone_field :telefone, autocomplete: "off", class: 'form-control', placeholder: 'Telefone' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.text_field :nomecontacto, autocomplete: "off", class: 'form-control', placeholder: 'nomecontacto' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.submit "Criar Cliente", class: "btn btn-primary btn-block btn-lg" %>
+      </div>
+    <% end %>
+
+    <div class="text-center">
+
+    </div>
+  </div>
+</div>

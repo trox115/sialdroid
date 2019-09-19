@@ -7,7 +7,7 @@
 @import "bootstrap";
 @import "sticky-footer";
 @import "announcements";
-
+$laranja: #ff6600;
 // Fixes bootstrap nav-brand container overlap
 @include media-breakpoint-down(xs) {
   .container {
@@ -19,4 +19,13 @@
 // Masquerade alert shouldn't have a bottom margin
 body > .alert {
   margin-bottom: 0;
+}
+
+.btn-primary{
+  background-color:$laranja;
+  border-color:orange;
+  :hover{
+    background-color:orange;
+    border-color:$laranja;
+  }
 }

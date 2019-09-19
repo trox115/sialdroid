@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -7,4 +9,6 @@ class User < ApplicationRecord
 
   has_many :notifications, foreign_key: :recipient_id
   has_many :services
+  belongs_to :company, optional: true
+  has_many :clientes
 end
