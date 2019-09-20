@@ -8,7 +8,9 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require("local-time").start()
-
+require('jquery')
+import 'bootstrap/dist/js/bootstrap';
+import 'bootstrap-daterangepicker/daterangepicker'
 window.Rails = Rails
 
 import 'bootstrap'

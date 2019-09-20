@@ -15,12 +15,14 @@ Rails.application.routes.draw do
   get '/terms', to: 'home#terms'
   get '/clientes/novo', to: 'clientes#new'
   post '/clientes/new', to: 'clientes#create'
+  get '/relatorios/novo', to: 'reports#new'
   authenticate :user, ->(u) { u.admin? } do
     mount Sidekiq::Web => '/sidekiq'
   end
 
   resources :notifications, only: [:index]
   resources :clientes
+  resources :reports
   resources :announcements, only: [:index]
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   root to: 'home#index'

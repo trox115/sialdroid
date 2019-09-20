@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_19_182404) do
+ActiveRecord::Schema.define(version: 2019_09_19_214942) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,6 +65,27 @@ ActiveRecord::Schema.define(version: 2019_09_19_182404) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "reports", force: :cascade do |t|
+    t.bigint "clientes_id", null: false
+    t.time "horachegada"
+    t.time "horasaida"
+    t.boolean "p1"
+    t.string "p11"
+    t.boolean "p2"
+    t.string "p22"
+    t.boolean "p3"
+    t.boolean "p4"
+    t.boolean "p5"
+    t.boolean "p6"
+    t.boolean "p7"
+    t.string "p71"
+    t.string "p8"
+    t.string "p9"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["clientes_id"], name: "index_reports_on_clientes_id"
+  end
+
   create_table "services", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.string "provider"
@@ -98,6 +119,7 @@ ActiveRecord::Schema.define(version: 2019_09_19_182404) do
   end
 
   add_foreign_key "clientes", "users"
+  add_foreign_key "reports", "clientes", column: "clientes_id"
   add_foreign_key "services", "users"
   add_foreign_key "users", "companies", column: "companies_id"
 end

@@ -1,0 +1,35 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  clientes: one
+  horachegada: 2019-09-19 22:49:42
+  horasaida: 2019-09-19 22:49:42
+  p1: false
+  p11: MyString
+  p2: false
+  p22: MyString
+  p3: false
+  p4: false
+  p5: false
+  p6: false
+  p7: false
+  p71: MyString
+  p8: MyString
+  p9: MyString
+
+two:
+  clientes: two
+  horachegada: 2019-09-19 22:49:42
+  horasaida: 2019-09-19 22:49:42
+  p1: false
+  p11: MyString
+  p2: false
+  p22: MyString
+  p3: false
+  p4: false
+  p5: false
+  p6: false
+  p7: false
+  p71: MyString
+  p8: MyString
+  p9: MyString
